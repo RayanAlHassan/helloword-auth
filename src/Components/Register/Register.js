@@ -10,11 +10,8 @@ const Register = () => {
  const handleRegister= async (e)=>{
     e.preventDefault();
 
-    const data={
-        name,email,password
-    }
     try{
-        const res= await axios.post("http://localhost:5001/register",{
+        const res= await axios.post("http://localhost:5001/user/register",{
             name,email,password
         })
         console.log("Response from backend:", res.data);
